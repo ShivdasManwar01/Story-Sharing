@@ -3,6 +3,7 @@ package com.example.shareit;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -48,25 +50,32 @@ public class Home extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                ProgressDialog pd=new ProgressDialog(Home.this);
+                pd.setMessage("Please wait");
+                pd.show();
                 FirebaseStorage storage = FirebaseStorage.getInstance();
                 StorageReference storageRef = storage.getReference();
 
                 String userId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
                 StorageReference storiesRef = storageRef.child("stories/" + userId);
 
-                Uri fileUri = imageUri;
-                if(fileUri!=null){
+//                Uri fileUri = Uri;
+                if(imageUri!=null){
                     StorageReference storyRef = storiesRef.child("story.mp4");
-                    UploadTask uploadTask = storyRef.putFile(fileUri);
+                    UploadTask uploadTask = storyRef.putFile(imageUri);
 
                     uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            // Story uploaded successfully
+                            pd.dismiss();
+                            startActivity(new Intent(Home.this,ConnectedUsers.class));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            pd.dismiss();
+                            Toast.makeText(Home.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                             // Handle error
                         }
                     });

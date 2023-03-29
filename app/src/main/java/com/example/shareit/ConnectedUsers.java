@@ -22,7 +22,7 @@ public class ConnectedUsers extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<MainModel> options = new FirebaseRecyclerOptions.Builder<MainModel>()
-                .setQuery(FirebaseDatabase.getInstance().getReference("User"), MainModel.class)
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("Users"), MainModel.class)
                 .build();
 
         mainAdapter = new MainAdapter(options);

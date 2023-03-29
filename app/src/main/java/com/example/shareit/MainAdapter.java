@@ -30,9 +30,6 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel, MainAdapter.
     protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull MainModel model) {
         holder.name.setText(model.getName());
         holder.username.setText(model.getUsername());
-        holder.img.setImageURI(model.getImage());
-        Glide.with(holder.img.getContext()).load(model.getImage()).placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_light).circleCrop().error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal).into(holder.img);
-
     }
 
     @NonNull

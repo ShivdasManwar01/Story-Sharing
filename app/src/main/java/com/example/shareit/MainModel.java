@@ -4,7 +4,6 @@ import android.net.Uri;
 
 public class MainModel {
     String name,username;
-    Uri image;
 
     MainModel() {
 
@@ -13,7 +12,6 @@ public class MainModel {
     public MainModel(String name, String username, Uri image) {
         this.name = name;
         this.username = username;
-        this.image = image;
     }
 
     public String getName() {
@@ -25,9 +23,6 @@ public class MainModel {
     }
 
 
-    public Uri getImage() {
-        return image;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -37,7 +32,4 @@ public class MainModel {
         this.username = username;
     }
 
-    public void setImage(Uri image) {
-        this.image = image;
-    }
 }
