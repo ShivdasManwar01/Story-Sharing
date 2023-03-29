@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/droame_logo"
+        android:id="@+id/logo" />
+
+    <TextView
+        android:id="@+id/moto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:fontFamily="@font/inconsolata_medium"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/already_user_text"
+        android:layout_height="wrap_content"
+        android:text="@string/alreadyuser"
+        android:layout_below="@+id/moto"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inconsolata_bold"
+
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/already_user_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/custom_btn"
+        android:fontFamily="@font/inconsolata_medium"
+        android:text="@string/login"
+        android:elevation="10dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/new_user"
+        android:layout_height="wrap_content"
+        android:text="@string/new_user"
+        android:layout_below="@+id/btn_login"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inconsolata_bold"
+
+        />
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_user"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/custom_btn"
+        android:fontFamily="@font/inconsolata_medium"
+        android:text="@string/register"
+        android:textColor="@android:color/white"
+        android:elevation="10dp" />
+</RelativeLayout>

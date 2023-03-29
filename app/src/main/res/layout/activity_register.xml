@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_profile_pic"
+        android:layout_gravity="center_horizontal"
+        app:civ_border_width="2dp"
+        android:layout_marginTop="100dp"
+        app:civ_border_color="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="select image"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/your_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:textColorHint="@color/colorPrimary"
+        android:padding="15dp"
+        android:inputType="textPersonName"
+
+        android:background="@drawable/custom_et"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name con not be empty"
+        android:id="@+id/name_war"
+        android:layout_marginHorizontal="25dp"
+        android:textColor="#E1372B"
+        android:fontFamily="@font/inconsolata_medium"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/email_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/e_mail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/custom_et"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email can not be empty"
+        android:id="@+id/email_war"
+        android:layout_marginHorizontal="25dp"
+        android:textColor="#E1372B"
+        android:fontFamily="@font/inconsolata_medium"
+        android:visibility="invisible" />
+    <EditText
+        android:id="@+id/username_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/custom_et"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email can not be empty"
+        android:id="@+id/username_war"
+        android:layout_marginHorizontal="25dp"
+        android:textColor="#E1372B"
+        android:fontFamily="@font/inconsolata_medium"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/password_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
+        android:textColorHint="@color/colorPrimary"
+        android:inputType="textPassword"
+        android:background="@drawable/custom_et"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="password can not be empty"
+        android:id="@+id/pass_war"
+        android:layout_marginHorizontal="25dp"
+        android:textColor="#E1372B"
+        android:fontFamily="@font/inconsolata_medium"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/repassword_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/re_type_password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="15dp"
+        android:textColorHint="@color/colorPrimary"
+
+        android:inputType="textPassword"
+        android:background="@drawable/custom_et"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="please re-enter your password"
+        android:id="@+id/repass_war"
+        android:layout_marginHorizontal="25dp"
+        android:textColor="#E1372B"
+        android:fontFamily="@font/inconsolata_medium"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="password did not match"
+        android:id="@+id/password_error"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#E1372B"
+        android:fontFamily="@font/inconsolata_medium"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/snackbar">
+
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_btn"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:text="@string/register" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/left_arrow_icon"
+            android:layout_above="@id/swipeLeft"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/swipeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/swipe_right_for_login"
+            android:textSize="15sp"
+
+            android:fontFamily="@font/alkatra_bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
